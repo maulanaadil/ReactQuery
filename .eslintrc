@@ -1,0 +1,8 @@
+{
+  "extends": ["@remix-run/eslint-config", "@remix-run/eslint-config/node"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "arrow-body-style": "off",
+    "@typescript-eslint/consistent-type-imports": "error"
+  }
+}
