@@ -1,9 +1,19 @@
+import { Routes, Route } from 'react-router-dom'
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
+import Homepage from './pages/home'
+import Postspage from './pages/posts'
+
+const queryClient = new QueryClient()
+
 function App() {
-  return (
-    <div className='App'>
-      <h1 className='text-3xl font-bold underline'>Hello World!</h1>
-    </div>
-  );
+    return (
+        <QueryClientProvider client={queryClient}>
+            <Routes>
+                <Route path='/' element={<Homepage />} />
+                <Route path='/posts/*' element={<Postspage />} />
+            </Routes>
+        </QueryClientProvider>
+    )
 }
 
-export default App;
+export default App
