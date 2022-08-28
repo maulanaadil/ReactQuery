@@ -6,7 +6,7 @@ export default function Postspage() {
     return (
         <Routes>
             <Route index element={<PostsModule />} />
-            <Route path=':id' element={<PostModule />} />
+            <Route path=':postId' element={<PostModule />} />
         </Routes>
     )
 }
